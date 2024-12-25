@@ -54,5 +54,3 @@ class setsy(set):
         setsy_set = self.copy()
         setsy_set_parameter = setsy(c)
         return setsy(setsy_set_parameter.difference(setsy_set))
-
-
