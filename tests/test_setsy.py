@@ -2,7 +2,7 @@ from src.setsy import setsy
 import pytest
 
 
-def test_one():
+def test_powerset():
     x = setsy(["1", "2", "3"])
     y = x.powerset()
     expected = [
