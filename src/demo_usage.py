@@ -1,4 +1,4 @@
-from setsy import setsy
+from src.setsy import setsy
 
 
 x = setsy([(1, 2), (1, 3)])
