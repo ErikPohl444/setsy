@@ -45,3 +45,30 @@ def test_preserve_order():
     s1 = setsy(l1)
     s1.printorig()
     assert s1.iter == l1
+
+def test_symmetric_difference():
+    s1 = setsy([1, 2, 3, 9])
+    s2 = setsy([1, 2, 3, 4, 5])
+    assert s1.symmetric_difference(s2) == set([9, 4 ,5])
+
+
+def test_insersection():
+    s1 = setsy([1, 2, 3, 9])
+    s2 = setsy([1, 2, 3, 4, 5])
+    assert s1.intersection(s2) == set([1, 2, 3])
+
+
+def test_union():
+    s1 = setsy([1, 2, 3, 9])
+    s2 = setsy([1, 2, 3, 4, 5])
+    assert s1.union(s2) == set([1, 2, 3, 4, 5, 9])
+
+def test___str__():
+    s1 = setsy([1, 2, 3, 9])
+    assert s1.__str__() == "{1, 2, 3, 9}"
+
+
+def test_cartesian():
+    s1 = setsy([1, 2])
+    s2 = setsy([3, 4])
+    assert s1.cartesian(s2) == {(2, 3), (2, 4), (1, 3), (1,4)}
