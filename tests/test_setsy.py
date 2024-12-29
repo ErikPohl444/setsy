@@ -16,7 +16,6 @@ def test_powerset():
                 ()
             ]
     for item in y:
-        print(item)
         assert set(item) in [
             set(n) for n in expected
         ]
@@ -29,10 +28,16 @@ def test_is_not_subset():
     assert s1.is_not_subset(s2)
 
 
+def test_is_not_subset():
+    s1 = setsy([1, 2, 3])
+    s2 = setsy([1, 2, 3, 4, 5])
+    assert not s1.is_not_subset(s2)
+
+
 def test_is_not_superset():
     s1 = setsy([1, 2, 3])
-    s2 = setsy([1, 2, 4, 5])
-    assert s2.is_not_superset(s1)
+    s2 = setsy([1, 2, 3, 4, 5])
+    assert not s2.is_not_superset(s1)
 
 
 def test_preserve_order():
