@@ -1,4 +1,4 @@
-from src.setsy import setsy
+from setsy import setsy
 from setup_logging import logger
 
 if __name__ == "__main__":
