@@ -36,17 +36,42 @@ Here are some elements I expect to be able to provide, if needed:
   - [ ] Extend this list
 
 
-## Getting Started
+### Getting Started
 
-Download these files to corresponding folders under your Python src path.
+This project provides an enhanced Python set class, `setsy`, with additional functionality for set operations, including power sets, cartesian products, and improved subset/superset checks with explanations. You can explore its features through the included demo script.
 
-## Prerequisites
+To quickly try out the capabilities, run the demo script or use the provided Docker setup for an isolated environment.
 
-I'll provide prereqs here.
+---
 
-## Installing
+### Prerequisites
 
-I will provide installation steps here.
+- Python 3.8 or higher
+- (Optional) Docker, for containerized usage
+
+---
+
+### Installing
+
+**Clone the repository:**
+```bash
+git clone https://github.com/ErikPohl444/setsy.git
+cd setsy
+```
+
+**Install dependencies:**
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+**Alternatively, run with Docker:**
+```bash
+docker build -t setsy .
+docker run --rm setsy
+```
 
 ## Running the tests
 
